@@ -101,10 +101,7 @@ export default function SignUpForm() {
           <h1 className="text-4xl font-extrabold tracking-tight lg:text-5xl mb-6">
             Join Unknown Feedback
           </h1>
-          <p className="mb-4">Sign up to start your anonymous adventure</p>
-          <p className="mb-5 text-gray-500">
-            Because the truth speaks louder when it's unknown.
-          </p>
+          <p className="mb-4">Start your anonymous adventure—because truth speaks louder when it's unknown.</p>
         </div>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -124,11 +121,10 @@ export default function SignUpForm() {
                   {isCheckingUsername && <Loader2 className="animate-spin" />}
                   {!isCheckingUsername && usernameMessage && (
                     <p
-                      className={`text-sm ${
-                        usernameMessage === "Username is unique"
-                          ? "text-green-500"
-                          : "text-red-500"
-                      }`}
+                      className={`text-sm ${usernameMessage === "Username is unique"
+                        ? "text-green-500"
+                        : "text-red-500"
+                        }`}
                     >
                       {usernameMessage}
                     </p>
